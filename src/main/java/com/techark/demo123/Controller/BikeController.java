@@ -7,6 +7,7 @@ import javax.websocket.server.PathParam;
 //added a line to test pull command
 //@PathParam()
 @RestController
+
 public class BikeController {
     @GetMapping(value="/bikedata/{bikeId}")
     public String Bike(@PathVariable(required = false) String bikeId){
@@ -20,4 +21,5 @@ public class BikeController {
     public String addbike(@RequestBody Bike bike){
         return "We are adding bike data for owner " + bike.name + "  color is " + bike.color + " and model is " + bike.model + " and manufactured in the year " + bike.yearofmfg;
     }
+    //Adding ship controller
 }
